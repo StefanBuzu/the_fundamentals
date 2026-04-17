@@ -31,7 +31,6 @@
     align-items: center;
   }
 
-  /* HEADER */
   .header {
     width: 100%;
     border-bottom: 1px solid var(--border);
@@ -44,227 +43,54 @@
     top: 0;
     z-index: 100;
   }
-  .logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
+  .logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
   .logo span { color: var(--gold-dark); }
+  .progress-bar-outer { flex: 1; max-width: 320px; margin: 0 2rem; height: 4px; background: var(--cream); border-radius: 2px; overflow: hidden; }
+  .progress-bar-inner { height: 100%; background: var(--gold); border-radius: 2px; transition: width 0.6s ease; }
+  .round-label { font-size: 0.78rem; color: var(--muted); font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap; }
 
-  .progress-bar-outer {
-    flex: 1;
-    max-width: 320px;
-    margin: 0 2rem;
-    height: 4px;
-    background: var(--cream);
-    border-radius: 2px;
-    overflow: hidden;
-  }
-  .progress-bar-inner {
-    height: 100%;
-    background: var(--gold);
-    border-radius: 2px;
-    transition: width 0.6s ease;
-  }
-  .round-label {
-    font-size: 0.78rem;
-    color: var(--muted);
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    white-space: nowrap;
-  }
-
-  /* SCREENS */
   .screen { display: none; width: 100%; max-width: 760px; padding: 3rem 1.5rem; }
   .screen.active { display: block; }
 
-  /* INTRO SCREEN */
-  .intro-hero {
-    text-align: center;
-    padding: 2rem 0 3rem;
-  }
-  .intro-eyebrow {
-    font-size: 0.75rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--gold-dark);
-    font-weight: 500;
-    margin-bottom: 1.2rem;
-  }
-  .intro-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.8rem, 6vw, 4.2rem);
-    font-weight: 900;
-    line-height: 1.05;
-    margin-bottom: 1.4rem;
-  }
-  .intro-subtitle {
-    font-size: 1.05rem;
-    color: var(--muted);
-    line-height: 1.7;
-    max-width: 480px;
-    margin: 0 auto 2.5rem;
-  }
+  .intro-hero { text-align: center; padding: 2rem 0 3rem; }
+  .intro-eyebrow { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dark); font-weight: 500; margin-bottom: 1.2rem; }
+  .intro-title { font-family: 'Playfair Display', serif; font-size: clamp(2.8rem, 6vw, 4.2rem); font-weight: 900; line-height: 1.05; margin-bottom: 1.4rem; }
+  .intro-subtitle { font-size: 1.05rem; color: var(--muted); line-height: 1.7; max-width: 480px; margin: 0 auto 2.5rem; }
 
-  .investor-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 1.5rem 2rem;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 2.5rem;
-    text-align: left;
-  }
-  .investor-avatar {
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #2c1810 0%, #5a3a1a 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.6rem;
-    color: var(--gold);
-    flex-shrink: 0;
-  }
+  .investor-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.5rem; text-align: left; }
+  .investor-avatar { width: 72px; height: 72px; border-radius: 50%; background: linear-gradient(135deg, #2c1810 0%, #5a3a1a 100%); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--gold); flex-shrink: 0; }
   .investor-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.2rem; }
   .investor-title { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.6rem; }
   .investor-bio { font-size: 0.88rem; line-height: 1.6; color: #4a4540; }
 
-  .criteria-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.75rem;
-    margin-bottom: 2.5rem;
-  }
-  .criteria-item {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 0.9rem 1rem;
-    font-size: 0.85rem;
-  }
-  .criteria-item strong {
-    display: block;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--gold-dark);
-    margin-bottom: 0.3rem;
-    font-weight: 500;
-  }
+  .criteria-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 2.5rem; }
+  .criteria-item { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 0.9rem 1rem; font-size: 0.85rem; }
+  .criteria-item strong { display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-dark); margin-bottom: 0.3rem; font-weight: 500; }
 
-  /* PITCH SCREEN */
-  .pitch-phase {
-    font-size: 0.72rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--gold-dark);
-    font-weight: 500;
-    margin-bottom: 0.6rem;
-  }
-  .pitch-question {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1.5rem, 4vw, 2.2rem);
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 0.8rem;
-  }
-  .pitch-hint {
-    font-size: 0.88rem;
-    color: var(--muted);
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-    padding: 0.8rem 1rem;
-    background: var(--cream);
-    border-radius: 8px;
-    border-left: 3px solid var(--gold);
-  }
+  .pitch-phase { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-dark); font-weight: 500; margin-bottom: 0.6rem; }
+  .pitch-question { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 700; line-height: 1.2; margin-bottom: 0.8rem; }
+  .pitch-hint { font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin-bottom: 1.5rem; padding: 0.8rem 1rem; background: var(--cream); border-radius: 8px; border-left: 3px solid var(--gold); }
   .pitch-hint em { font-style: italic; color: var(--gold-dark); }
 
-  textarea {
-    width: 100%;
-    min-height: 140px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.95rem;
-    line-height: 1.7;
-    color: var(--ink);
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 1rem 1.2rem;
-    resize: vertical;
-    outline: none;
-    transition: border-color 0.2s;
-  }
+  textarea { width: 100%; min-height: 140px; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; line-height: 1.7; color: var(--ink); background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; resize: vertical; outline: none; transition: border-color 0.2s; }
   textarea:focus { border-color: var(--gold); }
   textarea::placeholder { color: #b0a898; }
 
-  /* FEEDBACK PANEL */
-  .feedback-panel {
-    margin-top: 1.5rem;
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    overflow: hidden;
-    display: none;
-    animation: fadeSlideUp 0.4s ease;
-  }
+  .feedback-panel { margin-top: 1.5rem; background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; display: none; animation: fadeSlideUp 0.4s ease; }
   .feedback-panel.visible { display: block; }
 
-  @keyframes fadeSlideUp {
-    from { opacity: 0; transform: translateY(12px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+  @keyframes fadeSlideUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 
-  .feedback-header {
-    padding: 1rem 1.4rem;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    border-bottom: 1px solid var(--border);
-  }
-  .investor-mini-avatar {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #2c1810 0%, #5a3a1a 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 0.75rem;
-    color: var(--gold);
-    flex-shrink: 0;
-  }
+  .feedback-header { padding: 1rem 1.4rem; display: flex; align-items: center; gap: 0.8rem; border-bottom: 1px solid var(--border); }
+  .investor-mini-avatar { width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, #2c1810 0%, #5a3a1a 100%); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 0.75rem; color: var(--gold); flex-shrink: 0; }
   .feedback-investor-name { font-size: 0.82rem; font-weight: 500; }
-  .feedback-reaction {
-    margin-left: auto;
-    font-size: 0.78rem;
-    font-weight: 500;
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-  }
+  .feedback-reaction { margin-left: auto; font-size: 0.78rem; font-weight: 500; padding: 0.3rem 0.8rem; border-radius: 20px; }
   .reaction-good { background: #d4edda; color: #1e7a4a; }
   .reaction-ok { background: #fff3cd; color: #856404; }
   .reaction-poor { background: #f8d7da; color: #842029; }
 
-  .scores-row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    border-bottom: 1px solid var(--border);
-  }
-  .score-cell {
-    padding: 0.8rem;
-    text-align: center;
-    border-right: 1px solid var(--border);
-  }
+  .scores-row { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--border); }
+  .score-cell { padding: 0.8rem; text-align: center; border-right: 1px solid var(--border); }
   .score-cell:last-child { border-right: none; }
   .score-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 0.3rem; }
   .score-value { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; }
@@ -272,166 +98,40 @@
   .score-mid { color: #c88a00; }
   .score-low { color: var(--red); }
 
-  .feedback-text {
-    padding: 1.2rem 1.4rem;
-    font-size: 0.9rem;
-    line-height: 1.75;
-    color: #3a3530;
-    white-space: pre-wrap;
-  }
+  .feedback-text { padding: 1.2rem 1.4rem; font-size: 0.9rem; line-height: 1.75; color: #3a3530; }
 
-  /* LOADING STATE */
-  .loading-dots {
-    display: inline-flex;
-    gap: 4px;
-    align-items: center;
-  }
-  .loading-dots span {
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: var(--gold);
-    animation: bounce 1.2s ease infinite;
-  }
-  .loading-dots span:nth-child(2) { animation-delay: 0.2s; }
-  .loading-dots span:nth-child(3) { animation-delay: 0.4s; }
-  @keyframes bounce {
-    0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
-    40% { transform: scale(1); opacity: 1; }
-  }
-
-  /* FINAL SCREEN */
-  .verdict-hero {
-    text-align: center;
-    padding: 2rem 0;
-  }
-  .verdict-icon {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    display: block;
-  }
-  .verdict-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1.8rem, 5vw, 3rem);
-    font-weight: 900;
-    margin-bottom: 0.6rem;
-  }
+  .verdict-hero { text-align: center; padding: 2rem 0; }
+  .verdict-icon { font-size: 4rem; margin-bottom: 1rem; display: block; }
+  .verdict-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 900; margin-bottom: 0.6rem; }
   .verdict-funded { color: var(--green); }
   .verdict-notfunded { color: var(--red); }
   .verdict-partial { color: #c88a00; }
+  .verdict-amount { font-size: 1.1rem; color: var(--muted); margin-bottom: 2rem; line-height: 1.5; }
 
-  .verdict-amount {
-    font-size: 1.1rem;
-    color: var(--muted);
-    margin-bottom: 2rem;
-    line-height: 1.5;
-  }
-
-  .summary-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-  }
-  .summary-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 1rem;
-  }
+  .summary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 2rem; }
+  .summary-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 1rem; }
   .summary-card-phase { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 0.3rem; }
   .summary-card-score { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; }
   .summary-card-label { font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; }
 
-  .verdict-narrative {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 1.5rem;
-    font-size: 0.92rem;
-    line-height: 1.8;
-    color: #3a3530;
-    margin-bottom: 2rem;
-    white-space: pre-wrap;
-  }
+  .verdict-narrative { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; font-size: 0.92rem; line-height: 1.8; color: #3a3530; margin-bottom: 2rem; }
 
-  /* BUTTONS */
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.8rem 1.8rem;
-    border-radius: 8px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 500;
-    cursor: pointer;
-    border: none;
-    transition: all 0.15s ease;
-    text-decoration: none;
-  }
-  .btn-primary {
-    background: var(--ink);
-    color: var(--paper);
-  }
+  .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.8rem; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500; cursor: pointer; border: none; transition: all 0.15s ease; }
+  .btn-primary { background: var(--ink); color: var(--paper); }
   .btn-primary:hover { background: #2a2520; }
   .btn-primary:disabled { background: var(--border); color: var(--muted); cursor: not-allowed; }
-  .btn-gold {
-    background: var(--gold);
-    color: #1a0f00;
-  }
+  .btn-gold { background: var(--gold); color: #1a0f00; }
   .btn-gold:hover { background: var(--gold-dark); color: var(--paper); }
-  .btn-outline {
-    background: transparent;
-    color: var(--ink);
-    border: 1px solid var(--border);
-  }
-  .btn-outline:hover { background: var(--cream); }
+  .btn-row { display: flex; gap: 0.75rem; margin-top: 1.5rem; flex-wrap: wrap; }
 
-  .btn-row {
-    display: flex;
-    gap: 0.75rem;
-    margin-top: 1.5rem;
-    flex-wrap: wrap;
-  }
+  .word-count { font-size: 0.75rem; color: var(--muted); margin-top: 0.4rem; text-align: right; font-family: 'DM Mono', monospace; }
 
-  /* WORD COUNT */
-  .word-count {
-    font-size: 0.75rem;
-    color: var(--muted);
-    margin-top: 0.4rem;
-    text-align: right;
-    font-family: 'DM Mono', monospace;
-  }
-
-  /* DIVIDER */
-  .divider {
-    border: none;
-    border-top: 1px solid var(--border);
-    margin: 2rem 0;
-  }
-
-  /* ROUND TRACKER */
-  .round-tracker {
-    display: flex;
-    gap: 0.5rem;
-    margin-bottom: 2rem;
-  }
-  .round-dot {
-    width: 28px; height: 28px;
-    border-radius: 50%;
-    background: var(--cream);
-    border: 1px solid var(--border);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 0.7rem;
-    font-weight: 500;
-    color: var(--muted);
-    transition: all 0.3s ease;
-  }
+  .round-tracker { display: flex; gap: 0.5rem; margin-bottom: 2rem; }
+  .round-dot { width: 28px; height: 28px; border-radius: 50%; background: var(--cream); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 500; color: var(--muted); transition: all 0.3s ease; }
   .round-dot.done { background: var(--gold); border-color: var(--gold-dark); color: #1a0f00; }
   .round-dot.active { background: var(--ink); border-color: var(--ink); color: var(--paper); }
 
   @media (max-width: 560px) {
-    .criteria-grid, .summary-grid, .scores-row { grid-template-columns: 1fr 1fr; }
     .investor-card { flex-direction: column; text-align: center; }
     .intro-title { font-size: 2.2rem; }
   }
@@ -441,93 +141,76 @@
 
 <div class="header">
   <div class="logo">The <span>Fundamentals</span></div>
-  <div class="progress-bar-outer">
-    <div class="progress-bar-inner" id="progressBar" style="width:0%"></div>
-  </div>
+  <div class="progress-bar-outer"><div class="progress-bar-inner" id="progressBar" style="width:0%"></div></div>
   <div class="round-label" id="roundLabel">Intro</div>
 </div>
 
-<!-- INTRO SCREEN -->
+<!-- INTRO -->
 <div class="screen active" id="screen-intro">
   <div class="intro-hero">
     <p class="intro-eyebrow">A startup pitch simulator</p>
     <h1 class="intro-title">Can you secure the funding?</h1>
-    <p class="intro-subtitle">You have one shot to pitch your startup idea to a seasoned investor. Write each element of your pitch — and let the AI judge whether your words are clear, compelling, concise, and credible.</p>
+    <p class="intro-subtitle">You have one shot to pitch your startup to a seasoned investor. Write each element of your pitch — and get instant feedback on whether your words are clear, compelling, concise, and credible.</p>
   </div>
-
   <div class="investor-card">
     <div class="investor-avatar">M</div>
     <div>
       <div class="investor-name">Margaret Holborn</div>
       <div class="investor-title">Managing Partner, Holborn Ventures · 22 years in early-stage investing</div>
-      <div class="investor-bio">Former McKinsey partner turned VC. Has backed 40+ startups across fintech, edtech, and deep tech. Notorious for cutting meetings short when founders ramble. Values sharp thinking, honest traction numbers, and founders who know their numbers cold.</div>
+      <div class="investor-bio">Former McKinsey partner turned VC. Has backed 40+ startups across fintech, edtech, and deep tech. Notorious for cutting meetings short when founders ramble. Values sharp thinking, honest traction numbers, and founders who know their business cold.</div>
     </div>
   </div>
-
   <div class="criteria-grid">
     <div class="criteria-item"><strong>Clear</strong> Is your point immediately understood?</div>
     <div class="criteria-item"><strong>Compelling</strong> Does it make Margaret lean forward?</div>
     <div class="criteria-item"><strong>Concise</strong> No filler, no buzzwords, no fluff.</div>
     <div class="criteria-item"><strong>Credible</strong> Are your claims backed by evidence?</div>
   </div>
-
-  <p style="font-size:0.85rem; color:var(--muted); margin-bottom:1.5rem; line-height:1.6;">You'll pitch across <strong>4 rounds</strong>: Problem, Solution, Traction, and the Ask. Each round is scored. Your final funding outcome depends on how well you perform across all four.</p>
-
-  <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
-    <button class="btn btn-primary" onclick="startGame()">Start pitching →</button>
-  </div>
+  <p style="font-size:0.85rem; color:var(--muted); margin-bottom:1.5rem; line-height:1.6;">You'll pitch across <strong>4 rounds</strong>: Problem, Solution, Traction, and the Ask. Each round is scored. Your final funding outcome depends on your performance across all four.</p>
+  <button class="btn btn-primary" onclick="startGame()">Start pitching →</button>
 </div>
 
-<!-- PITCH SCREEN -->
+<!-- PITCH -->
 <div class="screen" id="screen-pitch">
   <div class="round-tracker" id="roundTracker"></div>
-
   <p class="pitch-phase" id="pitchPhase">Round 1 of 4 — Problem</p>
-  <h2 class="pitch-question" id="pitchQuestion">What is the problem you're solving?</h2>
-  <div class="pitch-hint" id="pitchHint">Hint loading...</div>
-
-  <textarea id="pitchTextarea" placeholder="Write your pitch here..." oninput="updateWordCount()"></textarea>
+  <h2 class="pitch-question" id="pitchQuestion"></h2>
+  <div class="pitch-hint" id="pitchHint"></div>
+  <textarea id="pitchTextarea" placeholder="" oninput="updateWordCount()"></textarea>
   <div class="word-count" id="wordCount">0 words</div>
-
   <div class="btn-row">
     <button class="btn btn-primary" id="submitBtn" onclick="submitPitch()">Submit to Margaret →</button>
   </div>
-
   <div class="feedback-panel" id="feedbackPanel">
     <div class="feedback-header">
       <div class="investor-mini-avatar">M</div>
       <div class="feedback-investor-name">Margaret Holborn</div>
-      <div class="feedback-reaction" id="feedbackReaction">Evaluating...</div>
+      <div class="feedback-reaction" id="feedbackReaction"></div>
     </div>
-    <div class="scores-row" id="scoresRow">
+    <div class="scores-row">
       <div class="score-cell"><div class="score-label">Clear</div><div class="score-value" id="s-clear">—</div></div>
       <div class="score-cell"><div class="score-label">Compelling</div><div class="score-value" id="s-compelling">—</div></div>
       <div class="score-cell"><div class="score-label">Concise</div><div class="score-value" id="s-concise">—</div></div>
       <div class="score-cell"><div class="score-label">Credible</div><div class="score-value" id="s-credible">—</div></div>
     </div>
-    <div class="feedback-text" id="feedbackText"><span class="loading-dots"><span></span><span></span><span></span></span></div>
+    <div class="feedback-text" id="feedbackText"></div>
     <div style="padding: 0 1.4rem 1.2rem;">
       <button class="btn btn-gold" id="nextBtn" onclick="nextRound()" style="display:none;">Continue →</button>
     </div>
   </div>
 </div>
 
-<!-- FINAL SCREEN -->
+<!-- FINAL -->
 <div class="screen" id="screen-final">
   <div class="verdict-hero">
     <span class="verdict-icon" id="verdictIcon">🤝</span>
     <h2 class="verdict-title" id="verdictTitle">Verdict</h2>
     <p class="verdict-amount" id="verdictAmount"></p>
   </div>
-
   <div class="summary-grid" id="summaryGrid"></div>
-
   <h3 style="font-family:'Playfair Display',serif; font-size:1.1rem; margin-bottom:0.8rem;">Margaret's final notes</h3>
-  <div class="verdict-narrative" id="verdictNarrative"><span class="loading-dots"><span></span><span></span><span></span></span></div>
-
-  <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
-    <button class="btn btn-primary" onclick="restartGame()">Pitch again →</button>
-  </div>
+  <div class="verdict-narrative" id="verdictNarrative"></div>
+  <button class="btn btn-primary" onclick="restartGame()">Pitch again →</button>
 </div>
 
 <script>
@@ -537,40 +220,81 @@ const ROUNDS = [
     question: "What problem are you solving — and why does it matter?",
     hint: "Describe the pain point your startup addresses. <em>Who suffers from it? How big is the problem?</em> Avoid vague generalities — give Margaret a concrete, vivid picture.",
     label: "Problem",
-    placeholder: "e.g. 40% of small restaurant owners spend 12+ hours a week on manual inventory tracking, leading to 18% average food waste and razor-thin margins..."
+    placeholder: "e.g. 40% of small restaurant owners spend 12+ hours a week on manual inventory tracking, leading to 18% average food waste...",
+    buzzwords: ["synergy","disrupt","revolutionary","game-changing","world-class","best-in-class","innovative solution","paradigm","ecosystem","leverage","scalable","cutting-edge","next-generation"],
+    goodSignals: { numbers: true, who: ["people","users","customers","businesses","companies","students","patients","workers","owners","teams"], pain: ["waste","lose","struggle","fail","spend","cost","problem","issue","challenge","difficult","inefficient","broken","painful","frustrated"] }
   },
   {
     phase: "Round 2 of 4 — Solution",
     question: "What is your solution, and why is it uniquely positioned to win?",
     hint: "Explain what your product does and <em>why your approach works where others have failed</em>. Keep it crisp — Margaret has seen a thousand pitch decks.",
     label: "Solution",
-    placeholder: "e.g. We built an AI-powered inventory assistant that integrates with any POS system in 15 minutes, predicts waste before it happens, and..."
+    placeholder: "e.g. We built an AI-powered inventory assistant that integrates with any POS system in 15 minutes and predicts waste before it happens...",
+    buzzwords: ["ai-powered","blockchain","revolutionary","game-changing","disruptive","magic","simple","easy","seamless","frictionless","intuitive"],
+    goodSignals: { numbers: true, how: ["built","created","developed","designed","using","through","by","integrates","connects","automates","replaces","reduces"], unique: ["unlike","different","only","first","proprietary","patent","unique","instead","better than","faster than"] }
   },
   {
     phase: "Round 3 of 4 — Traction",
     question: "What proof do you have that this works?",
-    hint: "<em>Numbers speak louder than adjectives.</em> Share real metrics: users, revenue, growth rate, pilot results, letters of intent — anything that shows the market is responding.",
+    hint: "<em>Numbers speak louder than adjectives.</em> Share real metrics: users, revenue, growth rate, pilot results — anything showing the market is responding.",
     label: "Traction",
-    placeholder: "e.g. 120 paying customers, $18k MRR, 40% MoM growth over the last 3 months. Our NPS is 72 and churn is under 3%..."
+    placeholder: "e.g. 120 paying customers, $18k MRR, 40% month-over-month growth over the last 3 months. NPS is 72 and churn under 3%...",
+    buzzwords: ["growing fast","gaining traction","lots of interest","people love it","great feedback","going well","promising","potential"],
+    goodSignals: { numbers: true, metrics: ["users","customers","revenue","mrr","arr","growth","retention","churn","nps","downloads","sales","clients","partners","pilots","contracts","waitlist"] }
   },
   {
     phase: "Round 4 of 4 — The Ask",
     question: "What are you asking for, and what will you do with it?",
-    hint: "Be precise: <em>How much are you raising? At what valuation? How will the capital be deployed?</em> Margaret despises vague asks — 'we need funding to grow' is a non-answer.",
+    hint: "Be precise: <em>How much are you raising? At what valuation? How will capital be deployed?</em> Margaret despises vague asks.",
     label: "Ask",
-    placeholder: "e.g. We are raising a $1.2M seed round at a $6M pre-money valuation. 60% goes to engineering, 30% to sales, 10% to ops. This extends our runway 18 months to reach $80k MRR..."
+    placeholder: "e.g. Raising $1.2M seed at $6M pre-money valuation. 60% engineering, 30% sales, 10% ops. Extends runway 18 months to reach $80k MRR...",
+    buzzwords: ["funding to grow","capital to scale","investment to expand","money to hire","resources to build"],
+    goodSignals: { numbers: true, money: ["$","million","k mrr","k arr","valuation","pre-money","post-money","runway","months","equity","stake","round","seed","series"] }
   }
 ];
 
+const FEEDBACK_TEMPLATES = {
+  Problem: {
+    high:   ["Your problem statement is sharp — you've named a real pain with real numbers. I immediately understood who's hurting and why. That's rarer than you'd think.", "You've identified a genuinely painful problem and backed it with specifics. I can see the market here.", "Concrete, vivid, and well-scoped. This is exactly how I want a problem statement to land."],
+    mid:    ["You've identified a real problem, but I'm still waiting for the 'so what.' How big is this? How many people suffer from it? Give me numbers.", "The pain point is clear enough, but it feels a bit generic. Every investor hears a version of this. What makes YOUR read of this problem unique?", "You're on the right track, but lean harder into the specifics. Who exactly is suffering, and what does that cost them in time or money?"],
+    low:    ["This is too vague. 'People have this problem' isn't a problem statement — it's a guess. Come back with data.", "I've heard this framing a hundred times. You haven't told me anything I couldn't have assumed myself. Be specific.", "I'm not convinced this is a real problem yet. You need evidence — customer interviews, market data, something tangible."]
+  },
+  Solution: {
+    high:   ["Clean. I understand exactly what you built and why it works. The differentiation is clear and you didn't hide behind jargon.", "You explained the solution without overselling it. That's a green flag. I can see how this actually works in the real world.", "Crisp, concrete, and differentiated. You know your product."],
+    mid:    ["I get the gist, but I'm fuzzy on the 'why now' and 'why you.' What stops a well-funded competitor from just building this?", "The solution sounds reasonable but I'm not seeing the unfair advantage. What makes this defensible?", "You've described features, not value. Tell me what changes for the customer the day they start using your product."],
+    low:    ["This reads like a feature list, not a solution. What problem does it actually solve, end-to-end?", "I still don't know what you built. Be more specific — walk me through what the user actually does.", "'AI-powered' is not a differentiator in 2025. What does your product actually do that others don't?"]
+  },
+  Traction: {
+    high:   ["These numbers tell a story. I can see the growth curve and the retention signal is strong. Well done.", "Solid traction data. You've clearly found product-market fit, at least in early form. Let's keep talking.", "You let the metrics speak for themselves — no inflation, no hedging. That's the mark of a founder who knows their business."],
+    mid:    ["The traction is okay, but it's thin. I need to see a trend, not a snapshot. What does growth look like month over month?", "Some good signals here, but I'd want to dig deeper into retention. Are these customers sticking around?", "These metrics are early-stage and that's fine — but don't dress them up as more than they are. Tell me the honest story."],
+    low:    ["'People love it' is not traction. Show me numbers — paying customers, usage data, revenue, anything.", "This is pre-traction. You have interest, not proof. Come back when you have customers paying real money.", "Vague traction claims are worse than no traction — they suggest you don't know your own metrics. Fix that before your next meeting."]
+  },
+  Ask: {
+    high:   ["Precise, well-reasoned allocation, and a realistic valuation. You know what you need and why. That's refreshing.", "Clean ask with a clear use of funds. The valuation is defensible given what you've shown me. I'd consider this.", "You've done the math. The runway, the milestones, the deployment breakdown — this is how a serious founder asks for money."],
+    mid:    ["The amount is in the right ballpark but the allocation is fuzzy. Investors want to know exactly where every dollar goes.", "You've named a number but not a valuation. That's a gap I'll need answered before any serious conversation.", "The ask is reasonable but the milestone you're targeting isn't specific enough. What does 'growth' actually look like at the end of this runway?"],
+    low:    ["'Funding to grow' is not an ask. How much? At what valuation? What will you do with it? Start over.", "You haven't told me what you're actually raising or at what terms. This isn't ready.", "Vague asks kill deals. I need a number, a valuation, and a concrete plan for the capital before I can take this seriously."]
+  }
+};
+
+const FINAL_NARRATIVES = {
+  high: [
+    "You came in prepared and it showed. Your problem framing was grounded in real data, your solution had a clear point of differentiation, and your traction numbers told a believable growth story. The ask was precise and the valuation defensible. My main note: don't get comfortable. The next investor will push harder on your retention assumptions. Know those numbers cold before your next meeting.",
+    "This was one of the stronger pitches I've sat through recently. You stayed specific throughout — no hand-waving, no buzzwords, just a clear narrative with numbers to back it up. Where you can still sharpen: your solution slide could more directly address why incumbents haven't solved this. Add that and you'll close faster."
+  ],
+  mid: [
+    "You've got the bones of a real pitch here, but you're leaving too much to my imagination. The problem is real, the solution is plausible, but the traction is thin and the ask needed more precision. Before your next meeting: get obsessive about your metrics. Know your MoM growth, your churn rate, and your unit economics by heart. That's what separates fundable from interesting.",
+    "There's a compelling story in here, but it's buried under vagueness. I could see the market opportunity — you just didn't sell it hard enough. Work on your traction narrative most: right now you're asking me to trust potential instead of evidence. The more you can show instead of tell, the better your odds."
+  ],
+  low: [
+    "You need to go back to the drawing board on a few things. The problem wasn't specific enough, the traction claims were unsubstantiated, and the ask was too vague for me to act on. I'd recommend talking to 20 more potential customers before your next pitch — let their words shape how you frame the problem. Then rebuild the deck around evidence, not ideas.",
+    "This pitch needed more preparation. Strong pitches aren't built on enthusiasm — they're built on specifics. Know your numbers, know your customer, know exactly what you're asking for and why. Come back when you can answer 'why now, why you, why this market' without hesitating."
+  ]
+};
+
 let currentRound = 0;
 let scores = [];
-let pitches = [];
-let isEvaluating = false;
 
-function startGame() {
-  showScreen('pitch');
-  loadRound(0);
-}
+function startGame() { showScreen('pitch'); loadRound(0); }
 
 function showScreen(name) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
@@ -578,15 +302,14 @@ function showScreen(name) {
 }
 
 function loadRound(idx) {
-  const round = ROUNDS[idx];
-  document.getElementById('pitchPhase').textContent = round.phase;
-  document.getElementById('pitchQuestion').textContent = round.question;
-  document.getElementById('pitchHint').innerHTML = 'Tip: ' + round.hint;
+  const r = ROUNDS[idx];
+  document.getElementById('pitchPhase').textContent = r.phase;
+  document.getElementById('pitchQuestion').textContent = r.question;
+  document.getElementById('pitchHint').innerHTML = 'Tip: ' + r.hint;
   document.getElementById('pitchTextarea').value = '';
-  document.getElementById('pitchTextarea').placeholder = round.placeholder;
+  document.getElementById('pitchTextarea').placeholder = r.placeholder;
   document.getElementById('wordCount').textContent = '0 words';
   document.getElementById('feedbackPanel').classList.remove('visible');
-  document.getElementById('feedbackText').innerHTML = '<span class="loading-dots"><span></span><span></span><span></span></span>';
   document.getElementById('nextBtn').style.display = 'none';
   document.getElementById('submitBtn').disabled = false;
   document.getElementById('submitBtn').style.display = 'inline-flex';
@@ -595,176 +318,168 @@ function loadRound(idx) {
     el.textContent = '—';
     el.className = 'score-value';
   });
-  document.getElementById('feedbackReaction').textContent = 'Evaluating...';
-  document.getElementById('feedbackReaction').className = 'feedback-reaction';
-
-  updateProgress();
-  buildRoundTracker();
+  document.getElementById('progressBar').style.width = ((idx / ROUNDS.length) * 100) + '%';
+  document.getElementById('roundLabel').textContent = 'Round ' + (idx+1) + ' / ' + ROUNDS.length;
+  buildTracker();
 }
 
-function buildRoundTracker() {
-  const container = document.getElementById('roundTracker');
-  container.innerHTML = '';
+function buildTracker() {
+  const c = document.getElementById('roundTracker');
+  c.innerHTML = '';
   ROUNDS.forEach((r, i) => {
-    const dot = document.createElement('div');
-    dot.className = 'round-dot' + (i < currentRound ? ' done' : i === currentRound ? ' active' : '');
-    dot.textContent = i < currentRound ? '✓' : (i + 1);
-    dot.title = r.label;
-    container.appendChild(dot);
+    const d = document.createElement('div');
+    d.className = 'round-dot' + (i < currentRound ? ' done' : i === currentRound ? ' active' : '');
+    d.textContent = i < currentRound ? '✓' : (i + 1);
+    c.appendChild(d);
   });
 }
 
-function updateProgress() {
-  const pct = (currentRound / ROUNDS.length) * 100;
-  document.getElementById('progressBar').style.width = pct + '%';
-  document.getElementById('roundLabel').textContent = `Round ${currentRound + 1} / ${ROUNDS.length}`;
-}
-
 function updateWordCount() {
-  const text = document.getElementById('pitchTextarea').value.trim();
-  const words = text ? text.split(/\s+/).length : 0;
-  document.getElementById('wordCount').textContent = words + (words === 1 ? ' word' : ' words');
+  const t = document.getElementById('pitchTextarea').value.trim();
+  const w = t ? t.split(/\s+/).length : 0;
+  document.getElementById('wordCount').textContent = w + (w === 1 ? ' word' : ' words');
 }
 
-async function submitPitch() {
-  const text = document.getElementById('pitchTextarea').value.trim();
-  if (text.length < 20) {
-    alert('Please write at least a sentence before submitting!');
-    return;
+function evaluate(text, round) {
+  const t = text.toLowerCase();
+  const words = t.split(/\s+/);
+  const wordCount = words.length;
+
+  // --- CLEAR: sentence structure, not too short, no rambling ---
+  let clear = 5;
+  if (wordCount < 10) clear -= 3;
+  else if (wordCount >= 20 && wordCount <= 120) clear += 2;
+  const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 3);
+  if (sentences.length >= 2) clear += 1;
+  if (wordCount > 200) clear -= 1;
+  clear = Math.min(10, Math.max(1, clear));
+
+  // --- COMPELLING: pain words, specific nouns, storytelling signals ---
+  let compelling = 4;
+  const painWords = round.goodSignals.pain || [];
+  const painFound = painWords.filter(w => t.includes(w)).length;
+  compelling += Math.min(3, painFound);
+  const whoWords = round.goodSignals.who || round.goodSignals.how || round.goodSignals.metrics || round.goodSignals.money || [];
+  const whoFound = whoWords.filter(w => t.includes(w)).length;
+  compelling += Math.min(2, whoFound);
+  if (round.goodSignals.unique) {
+    const uniqueFound = round.goodSignals.unique.filter(w => t.includes(w)).length;
+    compelling += Math.min(2, uniqueFound);
   }
-  if (isEvaluating) return;
-  isEvaluating = true;
+  compelling = Math.min(10, Math.max(1, compelling));
+
+  // --- CONCISE: penalize buzzwords, reward brevity with substance ---
+  let concise = 7;
+  const buzzFound = round.buzzwords.filter(b => t.includes(b)).length;
+  concise -= buzzFound * 2;
+  if (wordCount > 180) concise -= 2;
+  else if (wordCount > 120) concise -= 1;
+  if (wordCount < 15) concise -= 2;
+  concise = Math.min(10, Math.max(1, concise));
+
+  // --- CREDIBLE: numbers, percentages, dollar signs, named entities ---
+  let credible = 3;
+  const hasNumbers = /\d+/.test(text);
+  const hasPercent = /\d+\s*%/.test(text);
+  const hasDollar = /\$[\d,]+|\d+[km]\s*(mrr|arr|revenue|usd)/i.test(text);
+  const hasTimeframe = /month|week|year|quarter|\d+\s*days/i.test(t);
+  if (hasNumbers) credible += 2;
+  if (hasPercent) credible += 2;
+  if (hasDollar) credible += 2;
+  if (hasTimeframe) credible += 1;
+  if (round.label === 'Traction') {
+    const metricWords = round.goodSignals.metrics || [];
+    const metricFound = metricWords.filter(w => t.includes(w)).length;
+    credible += Math.min(3, metricFound);
+    if (!hasNumbers) credible -= 3;
+  }
+  if (round.label === 'Ask') {
+    const moneyWords = round.goodSignals.money || [];
+    const moneyFound = moneyWords.filter(w => t.includes(w)).length;
+    credible += Math.min(3, moneyFound);
+    if (!hasNumbers && !hasDollar) credible -= 3;
+  }
+  credible = Math.min(10, Math.max(1, credible));
+
+  const avg = (clear + compelling + concise + credible) / 4;
+  const tier = avg >= 7 ? 'high' : avg >= 5 ? 'mid' : 'low';
+  const reaction = avg >= 7.5 ? 'interested' : avg >= 5 ? 'skeptical' : 'not interested';
+
+  const templates = FEEDBACK_TEMPLATES[round.label][tier];
+  const feedback = templates[Math.floor(Math.random() * templates.length)];
+
+  // Add a specific observation about their actual text
+  let specific = '';
+  if (buzzFound > 0) {
+    const found = round.buzzwords.filter(b => t.includes(b));
+    specific = ` Drop "${found[0]}" — it's overused and adds nothing.`;
+  } else if (!hasNumbers && round.label !== 'Problem') {
+    specific = ' One thing missing: a number. Even a rough figure would make this far more credible.';
+  } else if (hasNumbers && hasDollar) {
+    specific = ' The specificity of your numbers is working in your favour.';
+  } else if (hasNumbers) {
+    specific = ' Good instinct putting a number in there — that\'s what makes claims land.';
+  }
+
+  return { clear, compelling, concise, credible, reaction, feedback: feedback + specific };
+}
+
+function submitPitch() {
+  const text = document.getElementById('pitchTextarea').value.trim();
+  if (text.length < 20) { alert('Please write at least a sentence before submitting!'); return; }
 
   document.getElementById('submitBtn').disabled = true;
+  document.getElementById('submitBtn').style.display = 'none';
   document.getElementById('feedbackPanel').classList.add('visible');
   document.getElementById('feedbackPanel').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  document.getElementById('feedbackText').textContent = 'Margaret is reading your pitch...';
 
-  const round = ROUNDS[currentRound];
-
-  const prompt = `You are Margaret Holborn, a seasoned venture capital investor evaluating a startup pitch. A founder is pitching to you for funding.
-
-Current pitch element: ${round.label}
-The founder's pitch text: "${text}"
-
-Evaluate this pitch element strictly and professionally. Return a JSON object (no markdown, no extra text, just raw JSON) with this exact structure:
-{
-  "clear": <integer 1-10>,
-  "compelling": <integer 1-10>,
-  "concise": <integer 1-10>,
-  "credible": <integer 1-10>,
-  "reaction": "interested" | "skeptical" | "not interested",
-  "feedback": "<2-3 sentences of specific, direct feedback as Margaret speaking in first person. Reference the actual words the founder used. Be honest, even harsh if warranted. Mention what worked and what didn't.>"
-}
-
-Scoring guide:
-- 8-10: Excellent, this element stands out
-- 5-7: Decent but needs work
-- 1-4: Weak, vague, or unconvincing
-
-Be strict. Most founders get 5-7 on their first attempt.`;
-
-  try {
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 1000,
-        messages: [{ role: 'user', content: prompt }]
-      })
-    });
-
-    const data = await response.json();
-    const rawText = data.content[0].text.trim();
-
-    let result;
-    try {
-      const cleaned = rawText.replace(/```json|```/g, '').trim();
-      result = JSON.parse(cleaned);
-    } catch {
-      result = {
-        clear: 6, compelling: 6, concise: 6, credible: 6,
-        reaction: 'skeptical',
-        feedback: rawText.slice(0, 300)
-      };
-    }
-
+  setTimeout(() => {
+    const result = evaluate(text, ROUNDS[currentRound]);
     scores.push(result);
-    pitches.push({ label: round.label, text });
     displayFeedback(result);
-
-  } catch (err) {
-    document.getElementById('feedbackText').textContent = 'Error connecting to AI. Please check your connection and try again.';
-  }
-
-  isEvaluating = false;
+  }, 900);
 }
 
 function displayFeedback(result) {
-  const scoreColor = (n) => n >= 8 ? 'score-high' : n >= 5 ? 'score-mid' : 'score-low';
-
-  const pairs = [
-    ['s-clear', result.clear],
-    ['s-compelling', result.compelling],
-    ['s-concise', result.concise],
-    ['s-credible', result.credible]
-  ];
-  pairs.forEach(([id, val]) => {
+  const scoreColor = n => n >= 8 ? 'score-high' : n >= 5 ? 'score-mid' : 'score-low';
+  [['s-clear', result.clear], ['s-compelling', result.compelling], ['s-concise', result.concise], ['s-credible', result.credible]].forEach(([id, val]) => {
     const el = document.getElementById(id);
     el.textContent = val + '/10';
     el.className = 'score-value ' + scoreColor(val);
   });
-
   const reactionEl = document.getElementById('feedbackReaction');
-  if (result.reaction === 'interested') {
-    reactionEl.textContent = '✓ Interested';
-    reactionEl.className = 'feedback-reaction reaction-good';
-  } else if (result.reaction === 'skeptical') {
-    reactionEl.textContent = '~ Skeptical';
-    reactionEl.className = 'feedback-reaction reaction-ok';
-  } else {
-    reactionEl.textContent = '✗ Not interested';
-    reactionEl.className = 'feedback-reaction reaction-poor';
-  }
-
+  if (result.reaction === 'interested') { reactionEl.textContent = '✓ Interested'; reactionEl.className = 'feedback-reaction reaction-good'; }
+  else if (result.reaction === 'skeptical') { reactionEl.textContent = '~ Skeptical'; reactionEl.className = 'feedback-reaction reaction-ok'; }
+  else { reactionEl.textContent = '✗ Not interested'; reactionEl.className = 'feedback-reaction reaction-poor'; }
   document.getElementById('feedbackText').textContent = result.feedback;
   document.getElementById('nextBtn').style.display = 'inline-flex';
-  document.getElementById('submitBtn').style.display = 'none';
 }
 
 function nextRound() {
   currentRound++;
-  if (currentRound >= ROUNDS.length) {
-    showFinalVerdict();
-  } else {
-    loadRound(currentRound);
-  }
+  if (currentRound >= ROUNDS.length) { showFinalVerdict(); }
+  else { loadRound(currentRound); }
 }
 
-async function showFinalVerdict() {
+function showFinalVerdict() {
   document.getElementById('progressBar').style.width = '100%';
   document.getElementById('roundLabel').textContent = 'Final verdict';
   showScreen('final');
 
   const avgScore = scores.reduce((sum, s) => sum + (s.clear + s.compelling + s.concise + s.credible) / 4, 0) / scores.length;
-  const roundedAvg = Math.round(avgScore * 10) / 10;
+  const rounded = Math.round(avgScore * 10) / 10;
 
-  let verdictClass, icon, title, amountText;
+  let verdictClass, icon, title, amountText, tier;
   if (avgScore >= 7.5) {
-    verdictClass = 'verdict-funded';
-    icon = '🤝';
-    title = 'Funded!';
-    amountText = `Margaret is writing the check. Strong pitch across all elements — you clearly know your business. Average score: ${roundedAvg}/10`;
-  } else if (avgScore >= 5.5) {
-    verdictClass = 'verdict-partial';
-    icon = '🤔';
-    title = 'Conditional interest';
-    amountText = `Margaret wants a follow-up meeting — but she's not convinced yet. You have work to do. Average score: ${roundedAvg}/10`;
+    verdictClass = 'verdict-funded'; icon = '🤝'; title = 'Funded!'; tier = 'high';
+    amountText = `Margaret is writing the check. Strong pitch across all elements. Average score: ${rounded}/10`;
+  } else if (avgScore >= 5) {
+    verdictClass = 'verdict-partial'; icon = '🤔'; title = 'Conditional interest'; tier = 'mid';
+    amountText = `Margaret wants a follow-up — but she's not convinced yet. Average score: ${rounded}/10`;
   } else {
-    verdictClass = 'verdict-notfunded';
-    icon = '❌';
-    title = 'Not funded';
-    amountText = `Margaret passed. Your pitch needed more clarity, evidence, and precision. Average score: ${roundedAvg}/10`;
+    verdictClass = 'verdict-notfunded'; icon = '❌'; title = 'Not funded'; tier = 'low';
+    amountText = `Margaret passed. Your pitch needed more precision and evidence. Average score: ${rounded}/10`;
   }
 
   document.getElementById('verdictIcon').textContent = icon;
@@ -777,47 +492,20 @@ async function showFinalVerdict() {
   grid.innerHTML = '';
   scores.forEach((s, i) => {
     const avg = Math.round(((s.clear + s.compelling + s.concise + s.credible) / 4) * 10) / 10;
-    const color = avg >= 7.5 ? 'var(--green)' : avg >= 5.5 ? '#c88a00' : 'var(--red)';
+    const color = avg >= 7.5 ? 'var(--green)' : avg >= 5 ? '#c88a00' : 'var(--red)';
     const card = document.createElement('div');
     card.className = 'summary-card';
     card.innerHTML = `<div class="summary-card-phase">${ROUNDS[i].label}</div><div class="summary-card-score" style="color:${color}">${avg}/10</div><div class="summary-card-label">${s.reaction}</div>`;
     grid.appendChild(card);
   });
 
-  const summaryText = scores.map((s, i) =>
-    `${ROUNDS[i].label}: Clear ${s.clear}/10, Compelling ${s.compelling}/10, Concise ${s.concise}/10, Credible ${s.credible}/10. Reaction: ${s.reaction}. Feedback: "${s.feedback}"`
-  ).join('\n\n');
-
-  const prompt = `You are Margaret Holborn, a veteran venture capital investor. You just finished evaluating a founder's full pitch across 4 elements. Here are your evaluation notes:
-
-${summaryText}
-
-Overall average score: ${roundedAvg}/10
-Verdict: ${title}
-
-Write your final investor verdict as Margaret speaking directly to the founder in 3-4 sentences. Be specific — reference what they actually said across rounds. Be honest about what impressed you and what needs work. Don't be generic. End with one concrete piece of advice they should act on before they pitch anyone else.`;
-
-  try {
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 1000,
-        messages: [{ role: 'user', content: prompt }]
-      })
-    });
-    const data = await response.json();
-    document.getElementById('verdictNarrative').textContent = data.content[0].text;
-  } catch {
-    document.getElementById('verdictNarrative').textContent = 'Could not load final narrative. Check your connection.';
-  }
+  const narratives = FINAL_NARRATIVES[tier];
+  document.getElementById('verdictNarrative').textContent = narratives[Math.floor(Math.random() * narratives.length)];
 }
 
 function restartGame() {
   currentRound = 0;
   scores = [];
-  pitches = [];
   document.getElementById('progressBar').style.width = '0%';
   document.getElementById('roundLabel').textContent = 'Intro';
   showScreen('intro');
